@@ -1,38 +1,136 @@
-.App {
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@font-face {
+  font-family: Font1;
+  src: url(MULI-BOLD.TTF);
+}
+
+@font-face {
+  font-family: Font2;
+  src: url(MULI-SEMIBOLD.TTF);
+}
+
+.App{
+  width: 100%;
+  margin: 10px auto;
+  height: auto;
+  background: #E9F2EE;
+  padding-bottom: 50px;
+}
+
+.Heading{
   text-align: center;
+  color:  rgba(77, 169, 187, 1);
+  font-size: 40px;
+  font-family: Font1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Slogan{
+  text-align: center;
+  color:  rgba(77, 169, 187, 1);
+  font-size: 18px;
+  margin-bottom: 50px;
+  font-family: Font2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 16px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.cname{
+  font-size: 24px;
+  color: #3D3D3D;
+  font-family: Font1;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.des{
+  font-size: 15px;
+  color: #3D3D3D;
+  font-family: Font2;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align:justify;
 }
+
+.date{
+  font-size: 10px;
+  font-family: Font2;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cnamedesdate{
+  width: 80%;
+  margin-left: 10px;
+}
+
+#dp{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.slide{
+  transform: scale(0.6);
+  transition: transform 300ms;
+  opacity: 0.75;
+}
+
+.activeSlide{
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.arrow{
+  /* background-color: white; */
+  border-radius: 20px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  padding-top: 10px;
+}
+
+.next{
+  right: 48%;
+  top: 105%;
+}
+
+.prev{
+  left: 48%;
+  top: 105%;
+}
+
+.arrow svg{
+  transition: color 300ms;
+}
+
+.arrow svg:hover{
+  color: rgba(0, 30, 108, 1)
+}
+
+.slick-dots li button:before {
+  color: #FFAC00;
+}
+
+.slick-dots li.slick-active button:before {
+  color:#488C8F !important;
+}
+
+
+
+
