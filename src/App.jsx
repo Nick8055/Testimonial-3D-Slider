@@ -32,6 +32,16 @@ const images = [
 
 const App = () => {
 
+  let x = window.innerWidth;
+  let y  = 0;
+
+  if(x >= 900){
+    y = 3;
+  }
+  else{
+    y = 1;
+  }
+
   const NextArrow = ({onClick}) => {
     return(
       <div className='arrow next' onClick={onClick}>
@@ -52,11 +62,11 @@ const App = () => {
 
   const settings = {
     dots: true,
-    dotsClass: "slick-dots",
+    dotsClass: "slick-dots slick-thumb",
     infinite: true,
     lazyload: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: y,
     centerMode: true,
     centerPadding: 0,
     nextArrow: <NextArrow/>,
@@ -68,6 +78,7 @@ const App = () => {
     <div className='App'>
       <h1 className='Heading'>Testimonials</h1>
       <h1 className='Slogan'>Our Clinicians love us. We are more capable, yet Pocket Friendly.</h1>
+      {/* <h1>{x}</h1> */}
       <Slider {...settings}>
         {images1.map((div, idx) => (
           <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>

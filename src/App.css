@@ -11,27 +11,33 @@
   src: url(MULI-SEMIBOLD.TTF);
 }
 
+@font-face {
+  font-family: Font3;
+  src: url(MULI-REGULAR.TTF);
+}
+
 .App{
   width: 100%;
-  margin: 10px auto;
+  margin: 0 auto;
   height: auto;
-  background: #E9F2EE;
-  padding-bottom: 50px;
+  background: #04ADBF;
+  padding-bottom: 100px;
 }
 
 .Heading{
   text-align: center;
-  color:  rgba(77, 169, 187, 1);
+  color:  white;
   font-size: 40px;
   font-family: Font1;
+  padding-top: 50px;
 }
 
 .Slogan{
   text-align: center;
-  color:  rgba(77, 169, 187, 1);
+  color:  white;
   font-size: 18px;
   margin-bottom: 50px;
-  font-family: Font2;
+  font-family: Font3;
 }
 
 
@@ -40,14 +46,18 @@
   height: auto;
   margin: 0 auto;
   display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   background: #FFFFFF;
   border-radius: 16px;
   align-items: center;
+  padding: 30px;
+  overflow-x: hidden;
 }
 
 
 .cname{
-  font-size: 24px;
+  font-size: 18px;
   color: #3D3D3D;
   font-family: Font1;
   margin-left: 10px;
@@ -55,7 +65,7 @@
 }
 
 .des{
-  font-size: 15px;
+  font-size: 13px;
   color: #3D3D3D;
   font-family: Font2;
   margin-left: 10px;
@@ -85,7 +95,7 @@
 }
 
 .slide{
-  transform: scale(0.6);
+  transform: scale(0.7);
   transition: transform 300ms;
   opacity: 0.75;
 }
@@ -94,6 +104,7 @@
   transform: scale(1);
   opacity: 1;
   z-index: 10;
+  padding-bottom: 35px;
 }
 
 .arrow{
@@ -106,12 +117,12 @@
 }
 
 .next{
-  right: 48%;
+  right: 45%;
   top: 105%;
 }
 
 .prev{
-  left: 48%;
+  left: 45%;
   top: 105%;
 }
 
@@ -123,12 +134,25 @@
   color: rgba(0, 30, 108, 1)
 }
 
+
 .slick-dots li button:before {
   color: #FFAC00;
 }
 
 .slick-dots li.slick-active button:before {
-  color:#488C8F !important;
+  color:#ffffff !important;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .item{
+    flex-wrap: wrap;
+  }
+
+  .cname{
+    text-align: center;
+  }
+
 }
 
 
